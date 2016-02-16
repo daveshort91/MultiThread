@@ -37,11 +37,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void create(View v) {
-        create.run();
+        Thread create_thread = new Thread(create);
+        create_thread.start();
     }
 
     public void load(View v) {
-        load.run();
+        Thread load_thread = new Thread(load);
+        load_thread.start();
     }
 
     public void clear(View v) {
